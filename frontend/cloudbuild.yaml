@@ -1,0 +1,46 @@
+steps:
+  # Build Docker image without layer cache so .env.production changes are always picked up
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--no-cache'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/civic-twin-frontend:latest'
+      - '.'
+
+  # Push to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/civic-twin-frontend:latest'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'civic-twin-frontend'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/civic-twin-frontend:latest'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
+      - '--memory'
+      - '512Mi'
+      - '--cpu'
+      - '1'
+      - '--timeout'
+      - '60'
+      - '--concurrency'
+      - '100'
+      - '--min-instances'
+      - '0'
+      - '--max-instances'
+      - '5'
+
+images:
+  - 'gcr.io/$PROJECT_ID/civic-twin-frontend:latest'

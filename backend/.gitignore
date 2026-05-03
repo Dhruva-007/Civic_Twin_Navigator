@@ -1,0 +1,95 @@
+# ─────────────────────────────────────────────
+# Civic Twin Navigator - Backend .gitignore
+# ─────────────────────────────────────────────
+
+# ── Environment Variables (CRITICAL - Never commit) ──
+.env
+.env.*
+*.env
+
+# ── Google Cloud Credentials (CRITICAL - Never commit) ──
+# Specific patterns only — do NOT use *.json (breaks package.json etc.)
+service-account*.json
+gcloud-credentials.json
+application_default_credentials.json
+firebase-adminsdk*.json
+*-firebase-adminsdk-*.json
+*-credentials.json
+credentials.json
+
+# ── Python Cache ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# ── Virtual Environment ──
+venv/
+env/
+.venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Distribution / Packaging ──
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ── Testing ──
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+coverage.xml
+*.cover
+nosetests.xml
+test-results/
+
+# ── Temporary Test Scripts ──
+test_bigquery.py
+test_vertex.py
+test_firebase.py
+test_services.py
+test_agents_*.py
+verify_dataset.py
+create_table.py
+
+# ── Logs ──
+*.log
+logs/
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── mypy ──
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ── Pydantic ──
+.pydantic_v1/

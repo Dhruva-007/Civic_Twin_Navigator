@@ -1,0 +1,85 @@
+# ─────────────────────────────────────────────
+# Civic Twin Navigator - Frontend .gitignore
+# ─────────────────────────────────────────────
+
+# ── Environment Variables (CRITICAL - Never commit) ──
+# .env.production is NOT committed but IS uploaded to Cloud Build
+# via .gcloudignore which explicitly allows it.
+.env
+.env.local
+.env.production
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production.local
+
+# ── Dependencies ──
+node_modules/
+.pnp
+.pnp.js
+
+# ── Build Output ──
+dist/
+dist-ssr/
+build/
+out/
+
+# ── Vite Cache ──
+.vite/
+
+# ── Logs ──
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+*.log
+
+# ── Testing ──
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+
+# ── Cache ──
+.cache/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+
+# ── TypeScript ──
+*.tsbuildinfo
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ── OS ──
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# ── Firebase Local Emulator ──
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# ── Temporary ──
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig

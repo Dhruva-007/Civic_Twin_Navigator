@@ -1,0 +1,36 @@
+# Dependencies (installed during build)
+node_modules/
+
+# Build output (built during Docker build)
+dist/
+build/
+
+# Local development env only - NOT production
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+# NOTE: .env.production is intentionally NOT ignored
+# Vite needs it at Docker build time for Cloud Run
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Tests
+coverage/
