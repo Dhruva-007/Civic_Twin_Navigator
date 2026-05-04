@@ -53,7 +53,13 @@ app = FastAPI(
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_url, "http://localhost:3000"],
+    allow_origins=[
+        settings.frontend_url,
+        "https://civic-twin-frontend-h7fqixpcja-uc.a.run.app",
+        "https://civic-twin-frontend-238377251738.us-central1.run.app",
+        "http://localhost:3000",
+        "http://localhost:5173"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
