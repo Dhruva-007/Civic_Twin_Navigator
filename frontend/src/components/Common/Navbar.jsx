@@ -79,7 +79,7 @@ function Navbar() {
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <CivicIcon size={16} color="#FFFFFF" />
+              <CivicIcon size={25} color="#FFFFFF" />
             </div>
             <span
               style={{

@@ -91,9 +91,9 @@ function Home() {
           >
             <div
               style={{
-                width: '64px',
-                height: '64px',
-                borderRadius: '16px',
+                width: '48px',
+                height: '48px',
+                borderRadius: '12px',
                 background: 'linear-gradient(135deg, #0176D3, #0EA5E9)',
                 display: 'flex',
                 alignItems: 'center',
@@ -101,7 +101,7 @@ function Home() {
                 margin: '0 auto 24px',
               }}
             >
-              <CivicIcon size={28} color="#FFFFFF" />
+              <CivicIcon size={30} color="#FFFFFF" />
             </div>
 
             <TranslatableText
@@ -600,7 +600,7 @@ function Home() {
                   justifyContent: 'center',
                 }}
               >
-                <CivicIcon size={14} color="#FFFFFF" />
+                <CivicIcon size={22} color="#FFFFFF" />
               </div>
               <span style={{ fontWeight: '700', fontSize: '14px', color: '#1E1E1E' }}>
                 Civic Twin Navigator

@@ -45,9 +45,9 @@ function ForgotPassword() {
           <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
             <div
               style={{
-                width: '52px',
-                height: '52px',
-                borderRadius: '14px',
+                width: '38px',
+                height: '38px',
+                borderRadius: '10px',
                 background: 'linear-gradient(135deg, #0176D3, #0EA5E9)',
                 display: 'flex',
                 alignItems: 'center',
